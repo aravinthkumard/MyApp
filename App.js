@@ -18,7 +18,8 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to ReactNative with CodePush!</Text>
         <Text style={styles.codePushText1}>This is CodePush Demo!</Text>
-        <Image source={require('./image.png')} />
+        <Image style={{width: 320, height: 220}} source={require('./image.png')}  />
+        <Text style={styles.codePushText3}>Your app has been updated...</Text>
         </View>
     );
   }
@@ -51,6 +52,10 @@ const styles = StyleSheet.create({
   codePushText2:{
     fontSize: 20,
     color: 'blue'
+  },
+  codePushText3:{
+    fontSize: 15,
+    color: 'goldenrod'
   }
 });
 
