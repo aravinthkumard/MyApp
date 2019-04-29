@@ -29,8 +29,9 @@ export default class App extends Component<Props> {
         <Text style={styles.instructions}>{instructions}</Text>
         <Text style={styles.codePushText1}>This is CodePush Update!</Text>
         <Text style={styles.codePushText2}>This is Second CodePush Update!</Text>
-        <Text style={styles.codePushText2}>This is 3rd CodePush Update!</Text>
+        <Text style={styles.codePushText1}>This is 3rd CodePush Update!</Text>
         <Text style={styles.codePushText2}>This is 4th CodePush Update!</Text>
+        <Text style={styles.codePushText1}>This is 5th CodePush Update!</Text>
       </View>
     );
   }
