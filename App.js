@@ -7,10 +7,10 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Image} from 'react-native';
 import codePush from "react-native-code-push";
 
-const codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_START };
+const codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_START};
 
 export default class App extends Component {
   render() {
@@ -18,8 +18,8 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to ReactNative with CodePush!</Text>
         <Text style={styles.codePushText1}>This is CodePush Demo!</Text>
-        <Text style={styles.codePushText2}>Currently there are no updates...</Text>
-      </View>
+        <Image source={require('./image.png')} />
+        </View>
     );
   }
 }
