@@ -8,6 +8,9 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import codePush from "react-native-code-push";
+
+const codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_START };
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -24,10 +27,13 @@ export default class App extends Component<Props> {
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+        <Text>This is CodePush Update!</Text>
       </View>
     );
   }
 }
+
+MyApp = codePush(codePushOptions)(MyApp);
 
 const styles = StyleSheet.create({
   container: {
