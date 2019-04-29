@@ -27,7 +27,8 @@ export default class App extends Component<Props> {
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Text style={styles.codePushText}>This is CodePush Update!</Text>
+        <Text style={styles.codePushText1}>This is CodePush Update!</Text>
+        <Text style={styles.codePushText2}>This is Second CodePush Update!</Text>
       </View>
     );
   }
@@ -52,8 +53,12 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  codePushText:{
+  codePushText1:{
     fontSize: 20,
-    color: 'red'
+    color: 'green'
+  },
+  codePushText2:{
+    fontSize: 20,
+    color: 'blue'
   }
 });
