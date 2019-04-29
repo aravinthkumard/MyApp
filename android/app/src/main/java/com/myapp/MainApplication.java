@@ -30,7 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new CodePush(getResources().getString(R.string.reactNativeCodePush_androidDeploymentKey), getApplicationContext(), BuildConfig.DEBUG)
+            new CodePush("9021EXbNMZInq4CgAjfhzRkoTNl58cf47679-e91c-41f4-8a99-7f481428875a", getApplicationContext(), BuildConfig.DEBUG)
       );
     }
 
