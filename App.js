@@ -33,7 +33,7 @@ export default class App extends Component<Props> {
   }
 }
 
-MyApp = codePush(codePushOptions)(MyApp);
+App = codePush(codePushOptions)(App);
 
 const styles = StyleSheet.create({
   container: {
