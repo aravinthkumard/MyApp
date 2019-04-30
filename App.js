@@ -25,7 +25,7 @@ export default class App extends Component {
   }
 }
 
-App = codePush({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE })(App);
+{/* App = codePush({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE })(App);*/}
 
 const styles = StyleSheet.create({
   container: {
