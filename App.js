@@ -6,26 +6,34 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import codePush from "react-native-code-push";
 
+let codePushOptions = { updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE }
+
+
 export default class App extends Component {
+
+  componentDidMount() {
+    codePush.sync()
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        {/*<Image style={{width:175,height:168}} source={require('./wow.png')}/> */}
+        <Image style={{width:175,height:168}} source={require('./wow.png')}/> 
         <Text style={styles.welcome}>ReactNative with CodePush</Text>
         <Text style={styles.codePushText1}>This is On-Air CodePush Demo</Text>
-        <Image style={{width: 290, height: 290}} source={require('./noUpdate.png')}/>
+        <Image style={{ width: 290, height: 290 }} source={require('./noUpdate.png')} />
         {/*<Image style={{width: 350, height: 250}} source={require('./image.png')}/>
         <Text style={styles.codePushText3}>Your app has been Updated...</Text> */}
-        </View>
+      </View>
     );
   }
 }
 
-App = codePush({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE })(App);
+App = codePush(codePushOptions)(App);
 
 const styles = StyleSheet.create({
   container: {
@@ -41,16 +49,16 @@ const styles = StyleSheet.create({
     color: 'darkblue',
     fontWeight: 'bold'
   },
-  codePushText1:{
+  codePushText1: {
     fontSize: 18,
     color: 'red',
     fontWeight: 'bold'
   },
-  codePushText2:{
+  codePushText2: {
     fontSize: 20,
     color: 'blue'
   },
-  codePushText3:{
+  codePushText3: {
     fontSize: 15,
     color: 'navy',
     fontWeight: 'bold'
