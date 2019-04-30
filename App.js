@@ -7,10 +7,8 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import codePush from "react-native-code-push";
-
-const codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_START};
 
 export default class App extends Component {
   render() {
@@ -18,36 +16,32 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to ReactNative with CodePush!</Text>
         <Text style={styles.codePushText1}>This is CodePush Demo!</Text>
-        <Image style={{width: 320, height: 220}} source={require('./image.png')}  />
-        <Text style={styles.codePushText3}>Your app has been updated...</Text>
+       { /* <Image style={{width: 320, height: 220}} source={require('./image.png')}  />
+        <Text style={styles.codePushText3}>Your app has been updated...</Text> */ }
+        <Image style={{width: 290, height: 290}} source={require('./noUpdate.png')}  />
         </View>
     );
   }
 }
 
-App = codePush(codePushOptions)(App);
+App = codePush({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE })(App);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'ivory',
   },
   welcome: {
     fontSize: 25,
     textAlign: 'center',
     margin: 10,
-    color: 'red'
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    color: 'darkblue'
   },
   codePushText1:{
     fontSize: 20,
-    color: 'green'
+    color: 'red'
   },
   codePushText2:{
     fontSize: 20,
@@ -55,7 +49,7 @@ const styles = StyleSheet.create({
   },
   codePushText3:{
     fontSize: 15,
-    color: 'goldenrod'
+    color: 'darkorange'
   }
 });
 
