@@ -16,9 +16,9 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to ReactNative with CodePush!</Text>
         <Text style={styles.codePushText1}>This is CodePush Demo!</Text>
-       { /* <Image style={{width: 320, height: 220}} source={require('./image.png')}  />
-        <Text style={styles.codePushText3}>Your app has been updated...</Text> */ }
-        <Image style={{width: 290, height: 290}} source={require('./noUpdate.png')}  />
+        <Image style={{width: 320, height: 220}} source={require('./image.png')}  />
+        <Text style={styles.codePushText3}>Your app has been updated...</Text> 
+        {/*<Image style={{width: 290, height: 290}} source={require('./noUpdate.png')}  /> */}
         </View>
     );
   }
