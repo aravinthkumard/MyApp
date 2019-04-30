@@ -14,7 +14,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {/*<Image style={{width:175,height:168}} source={require('./wow.png')}/>*/}
+        {/*<Image style={{width:175,height:168}} source={require('./wow.png')}/>*/ }
         <Text style={styles.welcome}>ReactNative with CodePush!</Text>
         <Text style={styles.codePushText1}>This is On-Air CodePush Demo</Text>
         <Image style={{width: 290, height: 290}} source={require('./noUpdate.png')}/>
