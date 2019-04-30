@@ -14,11 +14,11 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to ReactNative with CodePush!</Text>
-        <Text style={styles.codePushText1}>This is CodePush Demo!</Text>
-        <Image style={{width: 320, height: 220}} source={require('./image.png')}  />
-        <Text style={styles.codePushText3}>Your app has been updated...</Text> 
-        {/*<Image style={{width: 290, height: 290}} source={require('./noUpdate.png')}  /> */}
+        <Text style={styles.welcome}>ReactNative with CodePush</Text>
+        <Text style={styles.codePushText1}>This is On-Air CodePush Demo</Text>
+        {/* <Image style={{width: 350, height: 250}} source={require('./image.png')}  />
+        <Text style={styles.codePushText3}>Your app has been Updated...</Text> */}
+        <Image style={{width: 290, height: 290}} source={require('./noUpdate.png')}  /> 
         </View>
     );
   }
@@ -34,14 +34,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'ivory',
   },
   welcome: {
-    fontSize: 25,
+    fontSize: 22,
     textAlign: 'center',
     margin: 10,
-    color: 'darkblue'
+    color: 'darkblue',
+    fontWeight: 'bold'
   },
   codePushText1:{
-    fontSize: 20,
-    color: 'red'
+    fontSize: 18,
+    color: 'red',
+    fontWeight: 'bold'
   },
   codePushText2:{
     fontSize: 20,
@@ -49,7 +51,8 @@ const styles = StyleSheet.create({
   },
   codePushText3:{
     fontSize: 15,
-    color: 'darkorange'
+    color: 'navy',
+    fontWeight: 'bold'
   }
 });
 
