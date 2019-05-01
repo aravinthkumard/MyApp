@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import codePush from "react-native-code-push";
 
-let codePushOptions = { updateDialog: true, installMode: codePush.InstallMode.ON_NEXT_RESTART, checkFrequency: codePush.CheckFrequency.ON_APP_RESUME }
+let codePushOptions = { updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE, checkFrequency: codePush.CheckFrequency.ON_APP_RESUME }
 
 export default class App extends Component {
 
