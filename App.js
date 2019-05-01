@@ -10,14 +10,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import codePush from "react-native-code-push";
 
-let codePushOptions = { updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE, checkFrequency: codePush.CheckFrequency.ON_APP_RESUME }
-
 export default class App extends Component {
-
-  componentDidMount() {
-    codePush.sync()
-  }
-
 
   render() {
     return (
@@ -33,10 +26,7 @@ export default class App extends Component {
   }
 }
 
-App = codePush(codePushOptions)(App)
-module.exports = App
-
-{/* App = codePush({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE })(App); */ }
+App = codePush({ installMode: codePush.InstallMode.IMMEDIATE })(App);
 
 const styles = StyleSheet.create({
   container: {
